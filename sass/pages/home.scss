@@ -1,0 +1,33 @@
+main{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.start{
+    margin-top: 100px;
+    width: $width-primary;
+    height: $heigth-primary;
+    padding: 0 $padding-primary;
+    
+    display: flex;
+
+    &__left{
+        flex-grow: 2;
+
+
+
+        width: 50%;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+    }
+
+    &__rigth{
+        margin-top: -5%;
+        flex-grow: 1;
+        width: 50%;
+        background-image: url("../../imgs/beard-man.png");
+        background-size: cover;
+    }
+}

@@ -1,0 +1,204 @@
+@keyframes underline {
+  0% {
+    width: 0%; }
+  50% {
+    width: 50%; }
+  100% {
+    width: 100%; } }
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  /*10px*/ }
+
+body {
+  background-color: #000;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Poppins",sans-serif;
+  color: #FFF; }
+
+.start_heading {
+  font-size: 7rem;
+  font-weight: 700;
+  line-height: 55px;
+  position: relative; }
+  .start_heading::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -1rem;
+    height: 120%;
+    width: 3rem;
+    background-color: #ff4800;
+    z-index: -1; }
+
+.start__text {
+  font-size: 1.7rem;
+  color: #d6d6d6;
+  line-height: 1.5;
+  font-weight: 200; }
+
+.background-for-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  width: 4.5rem;
+  height: 4.5rem;
+  z-index: -1;
+  transition: all 0.8s; }
+
+.margin_top_meduim {
+  margin-top: 11rem; }
+
+.margin_bottom_meduim {
+  margin-bottom: 4rem; }
+
+.make--behind {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 37rem; }
+
+.btn {
+  position: relative;
+  transition: all 0.8s;
+  color: #FFF; }
+  .btn:link, .btn:visited {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.5rem; }
+  .btn--primary {
+    margin-left: 3rem; }
+    .btn--primary::after {
+      opacity: 0;
+      content: "";
+      position: absolute;
+      top: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: inline-block;
+      width: 0%;
+      height: 2px;
+      background-color: #ff4800;
+      transition: all 0.8s; }
+    .btn--primary:hover {
+      color: #ff4800; }
+      .btn--primary:hover::after {
+        opacity: 1;
+        animation: underline .4s ease;
+        animation-fill-mode: both;
+        animation-delay: .1s;
+        transition: all 0.8s; }
+  .btn--secondary {
+    padding: 1.3rem 3.2rem;
+    background-color: #ff4800;
+    border: 2px solid #ff4800;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden; }
+    .btn--secondary::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      height: 0;
+      width: 50%;
+      background-color: #ff4800;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      transition: all 0.8s; }
+    .btn--secondary::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      height: 0;
+      width: 50%;
+      background-color: #ff4800;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+      transition: all 0.8s; }
+    .btn--secondary:hover {
+      background-color: transparent; }
+    .btn--secondary:hover::after {
+      height: 100%; }
+    .btn--secondary:hover::before {
+      height: 100%; }
+  .btn--tertiary {
+    color: #848484;
+    position: absolute;
+    right: 0;
+    top: 45%;
+    transform: translateY(-50%); }
+    .btn--tertiary--icon {
+      font-size: 4.5rem;
+      color: #ff4800;
+      transition: all 0.8s; }
+
+.start__icon {
+  width: 14rem;
+  position: relative; }
+  .start__icon:hover {
+    cursor: pointer; }
+  .start__icon:hover .btn--tertiary {
+    color: #ff4800; }
+  .start__icon:hover .btn--tertiary--icon {
+    color: #000; }
+  .start__icon:hover .background-for-icon {
+    background-color: #FFF; }
+
+.header__selectlang {
+  background-color: transparent;
+  margin-left: 3rem;
+  color: #FFF;
+  outline: none;
+  border: 0; }
+  .header__selectlang--p {
+    background-color: #000;
+    margin: 0;
+    padding: 0; }
+
+header {
+  padding: 3rem 8rem;
+  width: 135.5rem;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: space-between; }
+
+main {
+  display: flex;
+  flex-flow: column;
+  align-items: center; }
+
+.start {
+  margin-top: 100px;
+  width: 135.5rem;
+  height: 60rem;
+  padding: 0 8rem;
+  display: flex; }
+  .start__left {
+    flex-grow: 2;
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start; }
+  .start__rigth {
+    margin-top: -5%;
+    flex-grow: 1;
+    width: 50%;
+    background-image: url("../../imgs/beard-man.png");
+    background-size: cover; }

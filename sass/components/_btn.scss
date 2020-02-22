@@ -1,0 +1,136 @@
+.btn{
+    position: relative;
+    transition: all $time;
+    color: $color-font;
+    &:link,
+    &:visited{
+        font-weight: bold;
+        text-decoration: none;
+        font-size: $font__size-priamry;
+        
+    }
+    &--primary{
+        margin-left: $padding-secondary;
+        
+        &::after{
+            opacity: 0;
+            content: "";
+            position: absolute;
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-block;
+            width: 0%;
+            height: 2px;
+            background-color: $color-primary;
+            transition: all $time;
+        }
+        &:hover{
+            color: $color-primary;
+            &::after
+            {
+                opacity: 1;
+                animation: underline .4s ease;
+                animation-fill-mode: both;
+                animation-delay: .1s;
+                transition: all $time;
+            }
+        }
+        
+    }
+
+    &--secondary{
+        padding: $padding-tb-btn;
+        background-color: $color-secondary;
+        border: 2px solid $color-secondary;
+        font-weight: bold;
+        position: relative;
+        overflow: hidden;
+
+        &::after{
+            content: "";
+            display: inline-block;
+            position: absolute;
+            height: 0;
+            width: 50%;
+            background-color: $color-secondary;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            transition: all $time;
+        }
+
+        &::before{
+            content: "";
+            display: inline-block;
+            position: absolute;
+            height: 0;
+            width: 50%;
+            background-color: $color-secondary;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            transition: all $time;
+        }
+
+        &:hover{
+            background-color: transparent;
+        }
+
+        &:hover::after{
+            height: 100%;
+        }
+
+        &:hover::before{
+            height: 100%;
+        }
+    }
+
+    &--tertiary{
+        color: $color-gray-1;
+        position: absolute;
+        right: 0;
+        top: 45%;
+        transform: translateY(-50%);
+
+        &--icon{
+            font-size: 4.5rem;
+            color: $color-secondary;
+            transition: all $time;
+        }
+    }
+    
+}
+
+.start__icon{
+    width: 14rem;
+    position: relative;
+
+    &:hover{
+        cursor: pointer;
+    }
+    &:hover .btn--tertiary{
+        color: $color-primary
+    }
+
+    &:hover .btn--tertiary--icon{
+        color: $color-background;
+    }
+
+    &:hover .background-for-icon{
+        background-color: $color-font;
+    }
+}
+
+.header__selectlang{
+    background-color: transparent;
+    margin-left: $padding-secondary;
+    color: $color-font;
+    outline: none;
+    border: 0;
+    &--p{
+        background-color: $color-background;
+        margin: 0;
+        padding: 0;
+    }
+}

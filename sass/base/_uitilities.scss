@@ -1,0 +1,25 @@
+.background-for-icon{
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    width: 4.5rem;
+    height: 4.5rem;
+    z-index: -1;
+    transition: all $time;
+}
+
+.margin_top_meduim{
+    margin-top: 11rem;
+}
+
+.margin_bottom_meduim{
+    margin-bottom: 4rem;
+}
+
+.make--behind{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 37rem;
+}

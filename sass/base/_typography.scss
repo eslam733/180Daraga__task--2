@@ -1,0 +1,33 @@
+body{
+    font-family: "Poppins",sans-serif;
+    color: $color-font;
+}
+
+.start_heading{
+    font-size: 7rem;
+    font-weight: 700;
+    line-height: 55px;
+    position: relative;
+
+    &::before{
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: -1rem;
+        height: 120%;
+        width: 3rem;
+        background-color: $color-secondary;
+        z-index: -1;
+        
+    }
+}
+
+
+.start__text{
+    font-size: $font__size-secondary;
+    color: $color-gray-2;
+    line-height: 1.5;
+    font-weight: 200;
+}
+
