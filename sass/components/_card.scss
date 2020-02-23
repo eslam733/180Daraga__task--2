@@ -1,0 +1,58 @@
+.card{
+    padding: $padding-primary $padding-secondary;
+    width: 100%;
+    background-color: $color-tertiary;
+    display: flex;
+    flex-flow: column;
+    transition: all $time;
+    position: relative;
+
+    &:hover .icons{
+        color: $color-font;
+    }
+
+    &:hover .dotted{
+        background-color: $color-font;
+    }
+
+    &:hover .dotted::after{
+        background-color: $color-secondary;
+    }
+
+    &:hover .dotted::before{
+        background-color: $color-secondary;
+    }
+
+    &:hover .logo__dot--white{
+        opacity: 1;    
+    }
+
+
+    &:hover{
+        background-color: $color-secondary;
+    }
+}
+
+.card-colored{
+    & .icons{
+        color: $color-font;
+    }
+
+    & .dotted{
+        background-color: $color-font;
+    }
+
+    & .dotted::after{
+        background-color: $color-secondary;
+    }
+
+    & .dotted::before{
+        background-color: $color-secondary;
+    }
+
+    background-color: $color-secondary;
+
+    & .logo__dot--white{
+        opacity: 1;
+    }
+}

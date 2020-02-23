@@ -6,6 +6,24 @@
   100% {
     width: 100%; } }
 
+@keyframes move__dotted--1 {
+  0% {
+    top: 0; }
+  100% {
+    top: 50px; } }
+
+@keyframes move__dotted--2 {
+  0% {
+    top: 12px; }
+  100% {
+    top: 62px; } }
+
+@keyframes dotted__for__card {
+  0% {
+    background-color: #111; }
+  100% {
+    background-color: #ff4800; } }
+
 *,
 *::after,
 *::before {
@@ -47,6 +65,9 @@ body {
   line-height: 1.5;
   font-weight: 200; }
 
+.font__primary {
+  font-size: 2.2rem; }
+
 .background-for-icon {
   position: absolute;
   left: 0;
@@ -59,6 +80,12 @@ body {
 
 .margin_top_meduim {
   margin-top: 11rem; }
+
+.margin_bottom_verysmall {
+  margin-bottom: 1rem; }
+
+.margin_bottom_small {
+  margin-bottom: 2rem; }
 
 .margin_bottom_meduim {
   margin-bottom: 4rem; }
@@ -159,7 +186,9 @@ body {
 
 .header__selectlang {
   background-color: transparent;
+  font-size: 1.5rem;
   margin-left: 3rem;
+  font-weight: bold;
   color: #FFF;
   outline: none;
   border: 0; }
@@ -168,16 +197,146 @@ body {
     margin: 0;
     padding: 0; }
 
+.card {
+  padding: 8rem 3rem;
+  width: 100%;
+  background-color: #111;
+  display: flex;
+  flex-flow: column;
+  transition: all 0.8s;
+  position: relative; }
+  .card:hover .icons {
+    color: #FFF; }
+  .card:hover .dotted {
+    background-color: #FFF; }
+  .card:hover .dotted::after {
+    background-color: #ff4800; }
+  .card:hover .dotted::before {
+    background-color: #ff4800; }
+  .card:hover .logo__dot--white {
+    opacity: 1; }
+  .card:hover {
+    background-color: #ff4800; }
+
+.card-colored {
+  background-color: #ff4800; }
+  .card-colored .icons {
+    color: #FFF; }
+  .card-colored .dotted {
+    background-color: #FFF; }
+  .card-colored .dotted::after {
+    background-color: #ff4800; }
+  .card-colored .dotted::before {
+    background-color: #ff4800; }
+  .card-colored .logo__dot--white {
+    opacity: 1; }
+
+.dotted {
+  background-color: #ff4800;
+  position: relative;
+  transition: all 0.8s; }
+  .dotted--static {
+    height: 2px;
+    width: 50px; }
+    .dotted--static::after {
+      content: "";
+      display: inline-block;
+      height: 2px;
+      width: 4px;
+      background-color: #111;
+      position: absolute;
+      right: 8px;
+      top: 0;
+      transition: all 0.8s; }
+    .dotted--static::before {
+      content: "";
+      display: inline-block;
+      height: 2px;
+      width: 4px;
+      background-color: #111;
+      position: absolute;
+      right: 20px;
+      top: 0;
+      transition: all 0.8s; }
+  .dotted--dynamic {
+    height: 50px;
+    width: 2px;
+    margin: 0 auto; }
+    .dotted--dynamic::after {
+      content: "";
+      display: inline-block;
+      height: 4px;
+      width: 2px;
+      background-color: #111;
+      position: absolute;
+      right: 0;
+      top: -12px;
+      animation: move__dotted--1 4s;
+      animation-iteration-count: infinite; }
+    .dotted--dynamic::before {
+      content: "";
+      display: inline-block;
+      height: 4px;
+      width: 2px;
+      background-color: #111;
+      position: absolute;
+      right: 0;
+      top: 0;
+      animation: move__dotted--2 4s;
+      animation-iteration-count: infinite; }
+
+.icons {
+  font-size: 4.2rem;
+  color: #ff4800;
+  transition: all 0.8s; }
+
+.l-dot {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  transition: all 0.8s; }
+
+.logo__dot--white {
+  opacity: 0; }
+
+.row {
+  margin: 0 auto;
+  width: 114rem; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 2.5rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row .col-1-of-2 {
+    width: calc((100% - 2.5rem) /2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 2.5rem) /3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 2.5rem) /3) + 2.5rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 2.5rem) /4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 2.5rem) /4)); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 2.5rem) /4) + 2 * 2.5rem); }
+
 header {
   padding: 3rem 8rem;
-  width: 135.5rem;
+  width: 134.5rem;
+  background-color: #000;
   display: flex;
   align-items: center;
   position: fixed;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  justify-content: space-between; }
+  justify-content: space-between;
+  z-index: 100; }
 
 main {
   display: flex;
@@ -186,19 +345,24 @@ main {
 
 .start {
   margin-top: 100px;
-  width: 135.5rem;
+  width: 134.5rem;
   height: 60rem;
   padding: 0 8rem;
   display: flex; }
   .start__left {
     flex-grow: 2;
-    width: 50%;
+    width: 49%;
     display: flex;
     flex-flow: column;
     align-items: flex-start; }
   .start__rigth {
     margin-top: -5%;
     flex-grow: 1;
-    width: 50%;
+    width: 49%;
     background-image: url("../../imgs/beard-man.png");
     background-size: cover; }
+
+.market {
+  width: 134.5rem;
+  height: 60rem;
+  padding: 0 8rem; }

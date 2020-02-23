@@ -124,7 +124,9 @@
 
 .header__selectlang{
     background-color: transparent;
+    font-size: $font__size-priamry;
     margin-left: $padding-secondary;
+    font-weight: bold;
     color: $color-font;
     outline: none;
     border: 0;

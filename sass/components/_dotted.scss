@@ -1,0 +1,66 @@
+.dotted{
+    background-color: $color-secondary;
+    position: relative;
+    transition: all $time;
+
+    &--static{
+        height: 2px;
+        width: 50px;
+
+        &::after{
+            content: "";
+            display: inline-block;
+            height: 2px;
+            width: 4px;
+            background-color: $color-tertiary;
+            position: absolute;
+            right: 8px;
+            top: 0;
+            transition: all $time;
+        }
+
+        &::before{
+            content: "";
+            display: inline-block;
+            height: 2px;
+            width: 4px;
+            background-color: $color-tertiary;
+            position: absolute;
+            right: 20px;
+            top: 0;
+            transition: all $time;
+        }
+    }
+
+    &--dynamic{
+        height: 50px;
+        width: 2px;
+        margin: 0 auto;
+
+        &::after{
+            content: "";
+            display: inline-block;
+            height: 4px;
+            width: 2px;
+            background-color: $color-tertiary;
+            position: absolute;
+            right: 0;
+            top: -12px;
+            animation: move__dotted--1 $time-2;
+            animation-iteration-count: infinite;
+        }
+
+        &::before{
+            content: "";
+            display: inline-block;
+            height: 4px;
+            width: 2px;
+            background-color: $color-tertiary;
+            position: absolute;
+            right: 0;
+            top: 0;
+            animation: move__dotted--2 $time-2;
+            animation-iteration-count: infinite;
+        }
+    }
+}

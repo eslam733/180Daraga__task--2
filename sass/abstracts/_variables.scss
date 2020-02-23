@@ -1,14 +1,20 @@
 // COLORS
 $color-primary: #ff4800;
-$color-secondary: #ff4800; 
+$color-secondary: #ff4800;
+$color-tertiary: #111; 
 $color-font: #FFF;
 $color-background: #000;
 $color-gray-1: #848484;
 $color-gray-2: #d6d6d6;
 
 // WIDTH && HEIGTH
-$width-primary: 135.5rem;
+$width-primary: 134.5rem;
 $heigth-primary: 60rem;
+
+// GRID
+$max-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horzital: 2.5rem;
 
 // PADDING
 $padding-primary: 8rem;
@@ -18,6 +24,10 @@ $padding-tb-btn: 1.3rem 3.2rem;
 //FONTS
 $font__size-priamry: 1.5rem;
 $font__size-secondary: 1.7rem;
+$font__size-tertiary: 2.2rem;
+$font__size-icon: 4.2rem;
 
 // TRANSISION
 $time: 0.8s;
+
+$time-2: 4s;

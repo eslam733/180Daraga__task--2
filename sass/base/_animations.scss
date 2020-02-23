@@ -9,3 +9,33 @@
         width: 100%;
     }
 }
+
+@keyframes move__dotted--1{
+    0%{
+        top: 0;
+    }
+
+    100%{
+        top: 50px;
+    }
+}
+
+@keyframes move__dotted--2{
+    0%{
+        top: 12px;
+    }
+
+    100%{
+        top: 62px;
+    }
+}
+
+@keyframes dotted__for__card{
+    0%{
+        background-color: $color-tertiary;
+    }
+
+    100%{
+        background-color: $color-secondary;
+    }
+}
