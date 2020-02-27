@@ -66,7 +66,25 @@ body {
   font-weight: 200; }
 
 .font__primary {
-  font-size: 2.2rem; }
+  font-size: 2.2rem;
+  color: #FFF; }
+
+.about__span {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #ff4800;
+  display: block;
+  text-transform: uppercase; }
+
+.about__section {
+  font-size: 3.4rem; }
+
+.about__text--heading {
+  font-size: 2rem; }
+
+.Our_Testimonials__details--textb {
+  font-size: 1.5rem;
+  color: #ff4800; }
 
 .background-for-icon {
   position: absolute;
@@ -78,17 +96,31 @@ body {
   z-index: -1;
   transition: all 0.8s; }
 
+.make-line-height {
+  line-height: 3rem;
+  font-style: italic; }
+
 .margin_top_meduim {
-  margin-top: 11rem; }
+  margin-top: 11rem !important; }
+
+.margin_top_small {
+  margin-top: 1rem !important; }
 
 .margin_bottom_verysmall {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem !important; }
 
 .margin_bottom_small {
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem !important; }
 
 .margin_bottom_meduim {
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem !important; }
+
+.margin_bottom_large {
+  margin-bottom: 11rem !important; }
+
+.make_right_bottom {
+  float: right;
+  margin-top: 2.2rem; }
 
 .make--behind {
   display: flex;
@@ -197,6 +229,60 @@ body {
     margin: 0;
     padding: 0; }
 
+.services__bnt {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 100px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  background-color: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.8s;
+  cursor: pointer; }
+  .services__bnt--href {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold; }
+  .services__bnt--icon {
+    font-size: 3.4rem;
+    color: #ff4800; }
+  .services__bnt--arrow {
+    font-size: 3.4rem;
+    color: #848484;
+    font-weight: bold;
+    position: relative;
+    transition: all 0.8s;
+    right: 0; }
+  .services__bnt:hover {
+    background-color: #ff4800; }
+  .services__bnt:hover .ser1 {
+    background-color: #FFF; }
+  .services__bnt:hover .services__bnt--arrow {
+    right: -10px; }
+  .services__bnt--main {
+    background-color: #ff4800; }
+    .services__bnt--main .ser1 {
+      background-color: #FFF; }
+    .services__bnt--main .services__bnt--arrow {
+      right: -10px; }
+
+.ser1 {
+  background-color: #000;
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2rem;
+  transition: all 0.8s; }
+
+.ser2 {
+  flex-grow: 1;
+  transition: all 0.8s; }
+
 .card {
   padding: 8rem 3rem;
   width: 100%;
@@ -230,6 +316,82 @@ body {
     background-color: #ff4800; }
   .card-colored .logo__dot--white {
     opacity: 1; }
+
+.ourproject__photos--card {
+  width: 31.475rem;
+  margin-right: 3rem;
+  background-color: #111;
+  position: relative;
+  transition: all 0.8s;
+  float: left; }
+  .ourproject__photos--card--photo {
+    background-image: url(../../imgs/project2.jpg);
+    width: 100%;
+    height: 349px;
+    filter: grayscale(1);
+    transition: inherit; }
+  .ourproject__photos--card--text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    padding: 3rem; }
+  .ourproject__photos--card--text .start__text {
+    font-size: 1.5rem; }
+  .ourproject__photos--card a {
+    display: block;
+    text-decoration: none;
+    z-index: 100; }
+  .ourproject__photos--card:hover .ourproject__photos--card--photo {
+    filter: unset; }
+  .ourproject__photos--card:hover .bottom-to-up {
+    height: 11.8rem; }
+
+.bottom-to-up {
+  transition: all .4s;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #ff4800; }
+
+.ourteam__photos--card {
+  width: 25.78rem;
+  margin-right: 3rem;
+  background-color: #000;
+  position: relative;
+  transition: all 0.8s;
+  float: left; }
+  .ourteam__photos--card--photo {
+    overflow: hidden; }
+  .ourteam__photos--card--photo--p {
+    background-image: url(../../imgs/team3.jpg);
+    background-size: cover;
+    transition: all 0.4s !important;
+    width: 100%;
+    height: 349px;
+    position: relative;
+    top: 0;
+    filter: grayscale(1);
+    transition: inherit;
+    z-index: 0; }
+  .ourteam__photos--card--text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    padding: 3rem;
+    z-index: 100; }
+  .ourteam__photos--card--text .start__text {
+    font-size: 1.5rem; }
+  .ourteam__photos--card a {
+    display: block;
+    text-decoration: none;
+    z-index: 100; }
+  .ourteam__photos--card:hover .ourteam__photos--card--photo--p {
+    filter: unset;
+    top: 7rem; }
 
 .dotted {
   background-color: #ff4800;
@@ -267,7 +429,7 @@ body {
       display: inline-block;
       height: 4px;
       width: 2px;
-      background-color: #111;
+      background-color: #000;
       position: absolute;
       right: 0;
       top: -12px;
@@ -278,7 +440,7 @@ body {
       display: inline-block;
       height: 4px;
       width: 2px;
-      background-color: #111;
+      background-color: #000;
       position: absolute;
       right: 0;
       top: 0;
@@ -298,6 +460,59 @@ body {
 
 .logo__dot--white {
   opacity: 0; }
+
+.Our_Testimonials__details--icon {
+  background-image: url(../../imgs/Quotation-Marks-128.png);
+  background-size: cover;
+  position: relative;
+  left: -4%;
+  color: #FFF;
+  font-size: 1.5rem;
+  width: 10.5rem;
+  height: 7.5rem; }
+
+.ourteam__photos--card--photo--i {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.ourteam-icon {
+  color: #ff4800;
+  font-size: 3.4rem;
+  margin-right: 1rem; }
+
+.main--img {
+  filter: grayscale(1);
+  transition: all 0.8s; }
+
+.main--img:hover {
+  filter: unset; }
+
+.about__imgs {
+  position: relative; }
+
+.about__img--1 {
+  width: 66rem;
+  height: 46rem;
+  background-size: cover;
+  background-image: url(../../imgs/about1.jpg); }
+
+.about__img--2 {
+  position: absolute;
+  width: 31rem;
+  height: 49rem;
+  top: 14%;
+  left: -3%;
+  background-image: url(../../imgs/about2.jpg);
+  background-repeat: no-repeat; }
+
+.Our_Testimonials__photo {
+  background-image: url(../../imgs/women.jpg);
+  filter: grayscale(1);
+  background-size: cover;
+  transition: all 0.8s; }
+  .Our_Testimonials__photo:hover {
+    filter: unset; }
 
 .row {
   margin: 0 auto;
@@ -346,7 +561,7 @@ main {
 .start {
   margin-top: 100px;
   width: 134.5rem;
-  height: 60rem;
+  height: 57rem;
   padding: 0 8rem;
   display: flex; }
   .start__left {
@@ -359,10 +574,51 @@ main {
     margin-top: -5%;
     flex-grow: 1;
     width: 49%;
-    background-image: url("../../imgs/beard-man.png");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), url("../../imgs/beard-man.png");
     background-size: cover; }
 
 .market {
   width: 134.5rem;
-  height: 60rem;
+  height: 57rem;
+  padding: 0 8rem; }
+
+.about {
+  width: 134.5rem;
+  height: 57rem;
+  padding: 0 8rem; }
+
+.about__text {
+  display: flex; }
+  .about__text--icon {
+    padding-right: 2rem; }
+
+.serviec {
+  width: 134.5rem;
+  height: 57rem;
+  padding: 0 8rem; }
+
+.ourproject {
+  width: 134.5rem;
+  height: 57rem;
+  padding: 0 8rem; }
+
+.ourproject__photos {
+  margin-left: 2rem; }
+
+.Our_Testimonials {
+  width: 134.5rem;
+  height: 57rem;
+  padding: 0 8rem;
+  display: flex; }
+  .Our_Testimonials__photo {
+    width: 50%; }
+  .Our_Testimonials__details {
+    width: 50%;
+    padding-left: 3rem;
+    padding-top: 8rem;
+    position: relative; }
+
+.OurTeam {
+  width: 134.5rem;
+  height: 57rem;
   padding: 0 8rem; }

@@ -1,0 +1,40 @@
+.main--img{
+    filter: grayscale(1);
+    transition: all $time;
+}
+
+.main--img:hover{
+    filter: unset;
+}
+
+.about__imgs{
+    position: relative;
+}
+
+.about__img--1{
+    width: 66rem;
+    height: 46rem;
+    background-size: cover;
+    background-image: url(../../imgs/about1.jpg);
+}
+
+.about__img--2{
+    position: absolute;
+    width: 31rem;
+    height: 49rem;
+    top: 14%;
+    left: -3%;
+    background-image: url(../../imgs/about2.jpg);
+    background-repeat: no-repeat;
+}
+
+.Our_Testimonials__photo{
+    background-image: url(../../imgs/women.jpg);
+    filter: grayscale(1);
+    background-size: cover;
+    transition: all $time;
+
+    &:hover{
+        filter: unset;
+    }
+}

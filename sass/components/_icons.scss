@@ -14,3 +14,26 @@
 .logo__dot--white{
     opacity: 0;
 }
+
+.Our_Testimonials__details--icon{
+    background-image: url(../../imgs/Quotation-Marks-128.png);
+    background-size: cover;
+    position: relative;
+    left: -4%;
+    color: $color-font;
+    font-size: $font__size-priamry;
+    width: 10.5rem;
+    height: 7.5rem;
+}
+
+.ourteam__photos--card--photo--i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ourteam-icon{
+    color: $color-primary;
+    font-size: $font__size-fourth;
+    margin-right: 1rem;
+}

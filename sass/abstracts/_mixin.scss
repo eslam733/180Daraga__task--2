@@ -5,3 +5,9 @@
         clear: both;
     }
 }
+
+@mixin rest__section {
+    width: $width-primary;
+    height: $heigth-primary;
+    padding: 0 $padding-primary;
+}

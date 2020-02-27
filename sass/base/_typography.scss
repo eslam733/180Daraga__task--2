@@ -33,4 +33,26 @@ body{
 
 .font__primary{
     font-size: $font__size-tertiary;
+    color: $color-font;
+}
+
+.about__span{
+    font-weight: bold;
+    font-size: $font__size-priamry;
+    color: $color-primary;
+    display: block;
+    text-transform: uppercase;
+}
+
+.about__section{
+    font-size: $font__size-fourth;
+}
+
+.about__text--heading{
+    font-size: $font__heading-fifth;
+}
+
+.Our_Testimonials__details--textb{
+    font-size: 1.5rem;
+    color: $color-primary;
 }
