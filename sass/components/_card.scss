@@ -112,14 +112,17 @@
     background-color: $color-secondary;
 }
 
+.ourteam__photo{
+    display: flex;
+}
+
 .ourteam__photos--card{
     width: 25.78rem;
     margin-right: 3rem;
     background-color: $color-background;
     position: relative;
     transition: all $time;
-    float: left;
-
+    
     &--photo{
         overflow: hidden;
     }

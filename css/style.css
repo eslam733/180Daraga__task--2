@@ -356,13 +356,15 @@ body {
   left: 0;
   background-color: #ff4800; }
 
+.ourteam__photo {
+  display: flex; }
+
 .ourteam__photos--card {
   width: 25.78rem;
   margin-right: 3rem;
   background-color: #000;
   position: relative;
-  transition: all 0.8s;
-  float: left; }
+  transition: all 0.8s; }
   .ourteam__photos--card--photo {
     overflow: hidden; }
   .ourteam__photos--card--photo--p {
@@ -472,9 +474,9 @@ body {
   height: 7.5rem; }
 
 .ourteam__photos--card--photo--i {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  position: absolute;
+  padding-top: 2rem;
+  padding-left: 4rem; }
 
 .ourteam-icon {
   color: #ff4800;
